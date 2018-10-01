@@ -30,7 +30,7 @@ const twoSum = (nums, target) => {
     })
     return result
 }
-
+/* Fastest solution */
 const twoSum = (nums, target) => {
     const map = {}
     for (let i = 0; i < nums.length; i += 1) {
