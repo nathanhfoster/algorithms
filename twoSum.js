@@ -30,6 +30,17 @@ const twoSum = (nums, target) => {
     })
     return result
 }
+
+const twoSum = (nums, target) => {
+    let sums = []
+    let result = []
+    nums.map((v, i) => {
+        const complement = target - v
+        sums.includes(complement) ? result = [sums.indexOf(complement), i] : sums.push(v)
+    })
+    return result
+}
+
 /* Fastest solution */
 const twoSum = (nums, target) => {
     const map = {}
@@ -42,14 +53,4 @@ const twoSum = (nums, target) => {
         map[current] = i
     }
     return false
-}
-
-const twoSum = (nums, target) => {
-    let sums = []
-    let result = []
-    nums.map((v, i) => {
-        const complement = target - v
-        sums.includes(complement) ? result = [sums.indexOf(complement), i] : sums.push(v)
-    })
-    return result
 }
