@@ -63,4 +63,4 @@ const deepEquals = (a, b) => {
   return a !== a && b !== b
 }
 
-export { deepEquals }
+export default deepEquals
