@@ -10,7 +10,7 @@ const twoSum = (nums, target) => {
 
 const twoSum = (nums, target) => {
     const map = new Map()
-    for (let i = 0; i < nums.length; i += 1) {
+    for (let i = 0; i < nums.length; i++) {
         const current = nums[i]
         const complement = target - current
         if (map.has(complement)) {
@@ -44,7 +44,7 @@ const twoSum = (nums, target) => {
 /* Fastest solution */
 const twoSum = (nums, target) => {
     const map = {}
-    for (let i = 0; i < nums.length; i += 1) {
+    for (let i = 0; i < nums.length; i ++) {
         const current = nums[i]
         const complement = target - current
         if (complement in map) {
