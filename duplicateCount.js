@@ -2,19 +2,21 @@ const duplicateCount = text => {
   const map = new Map();
   const lowercaseText = text.toLowerCase();
 
-  let count = 0;
+  var count = 0;
 
   for (let i = 0; i < lowercaseText.length; i++) {
     const char = lowercaseText.charAt(i);
-    
+
     if (map.has(char)) {
-      if (map.get(char) === 0) {
+      const currentCount = map.get(char);
+      if (currentCount === 1) {
         count++;
-        map.set(char, 1);
+        map.set(char, currentCount + 1);
       }
     } else {
-      map.set(char, 0);
+      map.set(char, 1);
     }
   }
+
   return count;
 };
